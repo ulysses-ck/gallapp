@@ -6,7 +6,8 @@ export const useFetchImages = () => {
     const [loading, setLoading] = useState(true);
 
     const myRequest = useCallback(async () => {
-        const key = "client_id=RHWZKBWbkTj1e-cNppnT-r-TFXm_zBVRuVKO8-drb40";
+        // get the key in your personal account at https://unsplash.com/oauth/applications
+        const key = "your-client-id";
         let route = `https://api.unsplash.com/photos/?${key}`;
         if (input !== "") {
             route = `https://api.unsplash.com/search/photos/?query=${encodeURI(
